@@ -90,6 +90,7 @@ public class Tarea2 {
         System.out.println("Nombre: " + nombre);
         System.out.println("Seccion ingresada: " + seccion);
         System.out.println("Carnet: " + carnet);
+        System.out.println("promedio:"+promedio);
 
         // AGREGADO: método que muestra máximo, mínimo y promedio
         mostrarAnalisisNotas(notas, promedio);
@@ -104,8 +105,8 @@ public class Tarea2 {
 
     /*
      * METODO 1:
-     * Este método recorre el arreglo de una dimensión
-     * para encontrar la nota máxima y la nota mínima.
+     * Con este metodo utilizo el arreglo de una dimension 
+     * para poder encontra o distinguir entre la notra maxima y la nota minima .
      * También muestra el promedio calculado en el main.
      */
     public static void mostrarAnalisisNotas(
@@ -124,8 +125,6 @@ public class Tarea2 {
                 notaMinima = notas[i];
             }
         }
-
-        System.out.println("\n----- RESULTADOS DE LAS NOTAS -----");
         System.out.println("Nota maxima: " + notaMaxima);
         System.out.println("Nota minima: " + notaMinima);
         System.out.println("Promedio: " + promedio);
@@ -133,15 +132,14 @@ public class Tarea2 {
 
     /*
      * METODO 2:
-     * Este método solicita y valida los números
-     * que serán almacenados en la matriz.
+     * con este metod solicito y realizo una validacion de los numero spreviamente solicitados 
+     * los cuales se almacenaran en la matriz .
      */
     public static void llenarMatriz(
             Scanner teclado, int[][] matrizNotas) {
 
         boolean datoValido;
 
-        System.out.println("\n----- INGRESO DE LA MATRIZ -----");
         System.out.println(
                 "Ingresa las notas de 2 estudiantes "
                 + "para 3 actividades."
@@ -184,8 +182,8 @@ public class Tarea2 {
 
                 } else {
                     System.out.println(
-                            "Error: debes ingresar "
-                            + "un numero entero."
+                            "Error:  ingresa un numero entero "
+                            
                     );
 
                     teclado.next();
@@ -199,12 +197,11 @@ public class Tarea2 {
 
     /*
      * METODO 3:
-     * Este método muestra la matriz ordenada
+     * con este metodo se muestra la matriz ordenada 
      * por filas y columnas.
      */
     public static void mostrarMatriz(int[][] matrizNotas) {
 
-        System.out.println("\n----- MATRIZ DE NOTAS -----");
 
         for (int fila = 0;
                 fila < matrizNotas.length;
@@ -223,7 +220,7 @@ public class Tarea2 {
                 );
             }
 
-            // AGREGADO: llamar al método que suma la fila
+            // AGREGADO: llama al método que suma la fila
             int sumaFila = calcularSumaFila(
                     matrizNotas[fila]
             );
