@@ -19,11 +19,15 @@ public class Practica_1_202500375 {
         System.out.println("¿Me puedes brindar tu nombre?");
         nombre = teclado.nextLine();
         //Debo asegurarme que el formato de la placa sea "P###LLL"
-        System.out.println("¿Me puedes brindar tu numero de placa?");
-        placa = teclado.nextLine().toUpperCase();
-        System.out.println("nombre:" + nombre);
-        System.out.println("placa:"+placa);
-        
+        do {
+    System.out.println("¿Me puedes brindar tu número de placa? Por favor sigue el formato P###LLL");
+    placa = teclado.nextLine().toUpperCase();
+
+    if (!placa.matches("P[0-9]{3}[A-Z]{3}")) {
+        System.out.println("El formato que ingresó es incorrecto");
+    }
+
+} while (!placa.matches("P[0-9]{3}[A-Z]{3}"));
         
     }
     
