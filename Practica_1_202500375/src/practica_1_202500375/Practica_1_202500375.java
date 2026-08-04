@@ -14,7 +14,7 @@ public class Practica_1_202500375 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        // esta es una prueba
     }
     
 }
